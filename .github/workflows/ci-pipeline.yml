@@ -12,18 +12,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    #Checkout the repo
+      #Checkout the repo
       - uses: actions/checkout@v3
 
-    #install Node  
+      #install Node  
       - name: Use Node.js 18.x 
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-    #Install npm deps      
+      #Install npm deps      
       - name: Install dependencies
         run: npm clean-install
 
-    #Run linter    
+      #Run linter    
       - name: Run linter
         run: npm run lint
